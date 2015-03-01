@@ -43,3 +43,10 @@ For example, when you mix paint, it is easy to combine multiple shades of paint 
 An example of something that is relatively easy to solve but hard to have a reverse process for is prime factorization especially for huge numbers.
 
 Write down equation of Diffie Hellman on board, conceptually, using Wikipedia image.
+
+
+# SSL and TOR (Alastair)
+Watch this: https://www.youtube.com/watch?v=LAcGiLL4OZU
+
+* Secure Server Layer
+* The Onion Router
