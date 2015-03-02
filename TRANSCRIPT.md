@@ -46,7 +46,8 @@ Write down equation of Diffie Hellman on board, conceptually, using Wikipedia im
 
 
 # SSL and TOR (Alastair)
-Watch this: https://www.youtube.com/watch?v=LAcGiLL4OZU
+Watch this for TOR: https://www.youtube.com/watch?v=LAcGiLL4OZU
+Read this for SSL: http://security.stackexchange.com/questions/20803/how-does-ssl-tls-work
 
 * Secure Server Layer
 * The Onion Router
