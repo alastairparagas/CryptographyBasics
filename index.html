@@ -66,7 +66,6 @@
 				<section>
                     <img src="img/lockScreen.gif" style="max-width:50%;" alt="https://dribbble.com/shots/1897849-Security">
 					<h2>Cryptography and Encryption</h2>
-                    <div style="font-size:70%;">Alastair Paragas and Alberto Mizrahi</div>
 				</section>
 
                 <section>
@@ -83,14 +82,15 @@
 					<h2>What is Cryptography?</h2>
 					<ul>
 						<li>Greek: kryptos (hidden), graphein (writing)</li>
-                        <li>Study of secret communication in the presence of third parties
+                        <li>Study of secret communication, especially in the presence of third parties
                             <ul>
                                 <li>The message is to be known only by those intended to know about it.</li>
                             </ul>
-                            <li><b>Encryption</b> is the process of encoding or "translating" information in a way that only the intended recipient can read it. <b>Decryption</b> is the opposite process.</li>
+                            <li><b>Encryption</b> is the process of encoding or "translating" information in a way that only the intended recipient can read it.
+                                <b>Decryption</b> is the opposite process.</li>
                             <li>A <b>Cipher</b> is a an algorithm for encrypting and decrypting.
                         </li>
-                        <li>No cipher is completely secure (except one!): an attacker's best friend is <b>time</b>.</li>
+                        <li>No cipher is completely secure (except one!): an defender's best friend is <b>time</b>.</li>
 					</ul>
 				</section>
 
@@ -99,15 +99,15 @@
                     <ul>
                         <li>Every cipher of is composed of two parts:</li>
                         <ol>
-                            <li><b>Encryption/Decryption Algorithm:</b> the step-by-step procedure by which a message is encoded/decoded.</li>
+                            <li><b>Encryption/Decryption Algorithm:</b> the step-by-step procedure/method by which a message is encoded/decoded.</li>
                             <li><b>Key Space:</b> The set of all possible keys.</li>
                         </ol>
                         <li>The key is what makes each encryption unique: encrypting the same message with different keys will give very different results.</li>
-                        <li>Generally, the algorith is public knowledge (Kerchoff's Principle). What must be kept secret is the key.</li>
+                        <li>Generally, the algorithm is public knowledge (Kerchoff's Principle). What must be kept secret is the key.</li>
                         <li>There are two main types of ciphers:</li>
                         <ol>
-                            <li><b>Symmetric-key Ciphers:</b> the same key is used for both encryption and decryption.</li>
-                            <li><b>Asymmetric-key Ciphers:</b> different keys are used.</li>
+                            <li><b>Symmetric-key Ciphers:</b> The same key is used for both encryption and decryption.</li>
+                            <li><b>Asymmetric-key Ciphers:</b> Different keys are used.</li>
                         </ol>
                     </ul>
                 </section>
@@ -124,7 +124,7 @@
                         </li>
 					</ul>
                     <br>
-                    <table style="margin-top: 20px;">
+                    <table style="margin-top: 20px; margin-bottom: 10px;">
                         <thead>
                             <tr>
                                 <th>Shift of +3</th>
@@ -146,40 +146,44 @@
                             </tr>
                         </tbody>
                     </table>
+                    <ul>
+                        <li>Note that a Shift of -3 is the same as a shift of +23, as 26 letters in the English alphabet - 3 = 23</li>
+                    </ul>
 				</section>
 
                 <section>
                     <h2>Activity: Caesar Cipher</h2>
-                    <img src="img/caesarCipher.png">
-                    <ul> 
-                        <li>Try to decrypt the following message:</li>
-                        <blockquote>ZKHQ BRX ZLQ, VDB QRWKLQJ. ZKHQ BRX ORVH, VDB OHVV.</blockquote>
+                    <ul style="margin-bottom: 20px;"> 
+                        <li>Try to decrypt the following message: (you can use <a href="xarg.org/tools/caesar-cipher/">xarg.org/tools/caesar-cipher</a>)</li>
+                        <blockquote style="text-align:center;">V nz vzcrargenoyr</blockquote>
                     </ul>
+                    <img src="img/caesarActivity.png">
+                    <a href="xarg.org/2010/05/cracking-a-caesar-cipher/">How to crack it through an algorithm</a>
                 </section>
 
                 <section>
                     <h2> Answer </h2>
-                    <blockquote><i>When you win, say nothing. When you lose, say less.</i><br><br>-Paul Brown</blockquote>
+                    <blockquote><i>I am impenetrable</i></blockquote>
                 </section>
                 
                 <section>
                     <h2>Encryption: Polyalphabetic Cipher</h2>
                     <ul>
                         <li>The individuals sharing secret information agree on a secret word.</li>
-                        <li>The character position of each individual character in that secret word is used to shift the message you are hiding.</li>
+                        <li>The character position of each individual character in that secret word, in the English alphabet, is used to shift the message you are hiding.</li>
                         <li>Example:
                             <ul>
-                                <li>Secret word: Snake (Shift of 19,14,1,11,5)</li>
+                                <li>Secret word: Snake (Shift of 19,14,1,11,5) - S is the 19th alphabet, N is the 14th alphabet, etc.</li>
                                 <li>Secret message: Imperial March</li>
                                 <li>Shift every letter in the message "Imperial March" in the sequence of 19-14-1-11-5
                                     <ul>
                                         <li>
-                                            Shift <b>I</b> by 19 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            Shift <b>M</b> by 14 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            Shift <b>P</b> by 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                           Shift <b>E</b> by 11 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            Shift <b>R</b> by 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            Shift <b>I</b> by 19
+                                            Shift <b><u>I</u></b> by 19 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Shift <b><u>M</u></b> by 14 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Shift <b><u>P</u></b> by 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Shift <b><u>E</u></b> by 11 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Shift <b><u>R</u></b> by 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Shift <b><u>I</u></b> by 19
                                         </li>
                                         <li>Notice how we shift by 19 again on the second <b>I</b> of "Imperial".</li>
                                         <li>You keep reusing the same sequence of shifts until you reach the end of your message.</li>
@@ -219,9 +223,11 @@
                         <li>A cipher is said to be <b>broken</b> if a third party can recover the message or secret key from the encrypted transmission.</li>
                         <li>There are three general ways of attacking ciphers:</li>
                         <ol>
-                            <li><b>Brute-force attacks:</b> try every possible key until the message is succesfully decrypted.</li>
-                            <li><b>Theoretical attacks:</b> the mathematical theory which the cipher is based on is flawed or not strong enough.</li>
-                            <li><b>Implementation attacks:</b> the way the cipher is programmed and coded is flawed and and can be exploited. E.g. timming attacks</li>
+                            <li><b>Brute-force attacks:</b> Try every possible key until the message is succesfully decrypted.</li>
+                            <li><b>Theoretical attacks:</b> The mathematical theory which the cipher is based on is flawed or not strong enough.</li>
+                            <li><b>Implementation attacks:</b> The way the cipher is programmed and coded is flawed and and can be exploited. 
+                                <ul><li>Timing attacks</li></ul>
+                            </li>
                     </ul>
                 </section>
                     
@@ -253,31 +259,23 @@
 				</section>
 
 				<section>
-					<h2>Why is Cryptography important?</h2>
-                    <div style="padding-top: 20px;">
-                        <iframe width="853" height="480" src="https://www.youtube.com/embed/Gm5PZGb3OyQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
-                    </div>
+					<h2>Just how can you listen to someone's data? (on the same network)</h2>
+                    <ul>
+                        <li><a href="http://www.cisco.com/c/en/us/products/collateral/switches/catalyst-6500-series-switches/white_paper_c11_603839.html">ARP Spoofing</a> 
+                            - Someone either wants to connect to Wifi or wants to send some data to a Wifi network.
+                        </li>
+                        <li>This data that wants to reach another computer OR device that wants to connect to Wifi, want the actual MAC address (hardware address) of a 
+                            computer, given the IP address, so it knows where to send the data or request WiFI connection at.</li>
+                        <li>This both sends an ARP broadcast into the entire network.</li>
+                        <li>In an ARP spoof, given any IP address, you can lie and say that you are the device - giving your MAC address.</li>
+                        <li>Now, you can receive all the data sent by both parties to each other - man in the middle.</li>
+                    </ul>
 				</section>
 
 				<section>
-					<h2>Personal Story: Hacking my Brother</h2>
-					<div style="padding-top: 20px;">
-                        <img src="img/hack.jpg">
-                    </div>
-				</section>
-                
-                <section>
-                    <h2>Personal Story: Hacking my Brother</h2>
-                    <div style="padding-top: 20px;">
-                        <img src="img/antivirus.jpg">
-                    </div>
-                </section>
-
-				<section>
-					<h2>Modern Applications - SSL</h2>
+					<h2>Modern Applications - SSL, PGP</h2>
 					<div>
-						<img style="float:left; width:47.5%; margin-right:5%;" src="img/modernApplications1.png">
-                        <img style="float:left; width:47.5%;" src="img/modernApplications2.png">
+						<img style="width:47.5%;" src="img/modernApplications1.png">
 					</div>
 				</section>
                 
